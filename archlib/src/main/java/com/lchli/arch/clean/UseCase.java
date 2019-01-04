@@ -3,8 +3,12 @@ package com.lchli.arch.clean;
 public abstract class UseCase<P, R> {
     private static final TaskExecutor def = new DefaultTaskExecutor();
 
-    public static TaskExecutor defExecutor() {
-        return def;
+    public static void executeOnDiskIO(Runnable r) {
+        def.executeOnDiskIO(r);
+    }
+
+    public static void executeOnMainThread(Runnable r) {
+        def.executeOnMainThread(r);
     }
 
     public TaskExecutor getTaskExecutor() {
