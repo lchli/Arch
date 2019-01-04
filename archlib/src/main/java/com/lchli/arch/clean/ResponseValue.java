@@ -16,13 +16,25 @@ public class ResponseValue<DATA> {
         return hasError;
     }
 
-    public void setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
-        hasError = true;
-    }
-
     public String getErrorMsg() {
         return errorMsg;
     }
+
+    public ResponseValue setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        hasError = true;
+        return this;
+    }
+
+    public ResponseValue setCode(int code) {
+        this.code = code;
+        return this;
+    }
+
+    public ResponseValue setData(DATA data) {
+        this.data = data;
+        return this;
+    }
+
 
 }
