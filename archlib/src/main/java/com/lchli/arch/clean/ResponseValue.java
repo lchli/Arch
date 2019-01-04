@@ -20,18 +20,18 @@ public class ResponseValue<DATA> {
         return errorMsg;
     }
 
-    public ResponseValue setErrorMsg(String errorMsg) {
+    public ResponseValue<DATA> setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         hasError = true;
         return this;
     }
 
-    public ResponseValue setCode(int code) {
+    public ResponseValue<DATA> setCode(int code) {
         this.code = code;
         return this;
     }
 
-    public ResponseValue setData(DATA data) {
+    public ResponseValue<DATA> setData(DATA data) {
         this.data = data;
         return this;
     }
